@@ -52,6 +52,8 @@ After installing, **restart `dsh web`** and refresh the page. The archived-sessi
 dsh plugin --profile web remove @linxin666/dsh-chat-history
 ```
 
+> The package name is `@linxin666/dsh-chat-history` regardless of whether you installed via `github:` or `link:` — `dsh plugin remove` always takes the package name, not the install source.
+
 ## Architecture
 
 Dual-face plugin (same pattern as dsh-ssh / dsh-task-board):
@@ -137,6 +139,8 @@ dsh plugin --profile web add link:$(pwd)
 ```sh
 dsh plugin --profile web remove @linxin666/dsh-chat-history
 ```
+
+> 卸载时使用包名 `@linxin666/dsh-chat-history`，与安装方式（`github:` 或 `link:`）无关——`dsh plugin remove` 始终按包名移除。
 
 ### 安全
 
