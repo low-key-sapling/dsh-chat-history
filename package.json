@@ -1,7 +1,7 @@
 {
   "name": "@linxin666/dsh-chat-history",
-  "description": "Archived-conversation manager + conversation question outline for the dsh web GUI: archived sessions are managed from a Settings page (list / open / unarchive / rename — the official UI has no archived-session surface), and the right side of the conversation page shows a scrollable outline of every user question that locates the exact message when clicked.",
-  "version": "0.1.0",
+  "description": "Archived-conversation manager + right-side question outline for the dsh web GUI: archived sessions are managed from a Settings page (list / open / unarchive / rename / delete), and the conversation page shows a hover-expand rail listing every user question — click to locate the exact message.",
+  "version": "0.2.0",
   "type": "module",
   "engines": {
     "node": "^22.19.0 || >=24.0.0"
@@ -43,10 +43,23 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhu1090093659/dsh-web-ui.git"
+    "url": "git+https://github.com/low-key-sapling/dsh-chat-history.git"
   },
+  "homepage": "https://github.com/low-key-sapling/dsh-chat-history#readme",
+  "bugs": {
+    "url": "https://github.com/low-key-sapling/dsh-chat-history/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "chat-history",
+    "conversation-outline",
+    "archived-sessions"
+  ],
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "prepare": "node scripts/build.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.25.0"
