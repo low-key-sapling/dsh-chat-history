@@ -86,6 +86,10 @@ The browser bundle must keep the `window.__ModuleLoader__.load({ id, factory })`
 
 Apache-2.0
 
+## Links
+
+Thanks to the [LINUX DO](https://linux.do/) community for their help and support.
+
 ---
 
 ## 中文
@@ -151,3 +155,7 @@ npm run build      # 产出 lib/index.js（宿主）+ lib/client.js（浏览器�
 ### 许可证
 
 Apache-2.0
+
+## 友情链接 / Links
+
+感谢 [LINUX DO](https://linux.do/) 社区的帮助与支持。
