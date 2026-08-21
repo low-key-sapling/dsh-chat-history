@@ -29,7 +29,9 @@ Row color states: **grey** (normal) → **black** (hover) → **blue** (active /
 dsh plugin --profile web add github:low-key-sapling/dsh-chat-history
 ```
 
-The `prepare` script in `package.json` builds `lib/` automatically on install, so no manual build step is needed.
+Pre-built `lib/` artifacts are committed to the repository, so **no build step is needed** — install and restart.
+
+> If pnpm prints an `allowBuilds` warning (it blocks the `prepare` script), add the package key it printed to `pnpm-workspace.yaml` under `allowBuilds` and re-run. This only affects the optional `prepare` rebuild; the committed `lib/` already works without it.
 
 ### From a local clone (development)
 
@@ -120,7 +122,9 @@ npm install && npm run build
 dsh plugin --profile web add link:$(pwd)
 ```
 
-`github:` 方式安装时 `prepare` 脚本会自动构建 `lib/`，无需手动 build。`link:` 方式安装后改代码只需 `npm run build` + 刷新页面，无需重新安装。
+`github:` 方式安装时**无需构建**——仓库已包含预构建的 `lib/` 产物，安装后重启即可。如果 pnpm 提示 `allowBuilds`（它阻止了 `prepare` 脚本），按提示把包名加到 `pnpm-workspace.yaml` 的 `allowBuilds` 下再重跑即可，但这只影响可选的 `prepare` 重建，不影响已提交的 `lib/` 正常使用。
+
+`link:` 方式安装后，改代码只需 `npm run build` + 刷新页面，无需重新安装。
 
 安装后**重启 dsh web 并刷新页面**。设置里出现「归档会话」页；对话页右缘出现提问轨道。
 
