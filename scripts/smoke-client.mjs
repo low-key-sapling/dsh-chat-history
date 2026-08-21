@@ -25,14 +25,14 @@ const code = readFileSync(join(root, 'lib/client.js'), 'utf8')
 // runs in global scope, so read the factory back through the window object.
 // eslint-disable-next-line no-eval
 const factory = (0, eval)(
-  `${code}\n;window.__regs.find(r => r.id === ${JSON.stringify('@linxin666/dsh-chat-history')}).factory`,
+  `${code}\n;window.__regs.find(r => r.id === ${JSON.stringify('@low-key-sapling/dsh-chat-history')}).factory`,
 )
 
 const module = { exports: {} }
 const exports_ = module.exports
 const exportsOfFactory = factory((spec) => profileRequire(spec), module, exports_)
 
-const registered = registrations.find(r => r.id === '@linxin666/dsh-chat-history')
+const registered = registrations.find(r => r.id === '@low-key-sapling/dsh-chat-history')
 if (registered === undefined) {
   throw new Error('bundle did not register its id')
 }

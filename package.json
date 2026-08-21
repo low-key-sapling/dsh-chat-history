@@ -1,5 +1,5 @@
 {
-  "name": "@linxin666/dsh-chat-history",
+  "name": "@low-key-sapling/dsh-chat-history",
   "description": "Archived-conversation manager + right-side question outline for the dsh web GUI: archived sessions are managed from a Settings page (list / open / unarchive / rename / delete), and the conversation page shows a hover-expand rail listing every user question — click to locate the exact message.",
   "version": "0.2.0",
   "type": "module",

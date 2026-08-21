@@ -49,10 +49,10 @@ After installing, **restart `dsh web`** and refresh the page. The archived-sessi
 ## Uninstall
 
 ```sh
-dsh plugin --profile web remove @linxin666/dsh-chat-history
+dsh plugin --profile web remove @low-key-sapling/dsh-chat-history
 ```
 
-> The package name is `@linxin666/dsh-chat-history` regardless of whether you installed via `github:` or `link:` — `dsh plugin remove` always takes the package name, not the install source.
+> The package name is `@low-key-sapling/dsh-chat-history` regardless of whether you installed via `github:` or `link:` — `dsh plugin remove` always takes the package name, not the install source.
 
 ## Architecture
 
@@ -137,10 +137,10 @@ dsh plugin --profile web add link:$(pwd)
 ### 卸载
 
 ```sh
-dsh plugin --profile web remove @linxin666/dsh-chat-history
+dsh plugin --profile web remove @low-key-sapling/dsh-chat-history
 ```
 
-> 卸载时使用包名 `@linxin666/dsh-chat-history`，与安装方式（`github:` 或 `link:`）无关——`dsh plugin remove` 始终按包名移除。
+> 卸载时使用包名 `@low-key-sapling/dsh-chat-history`，与安装方式（`github:` 或 `link:`）无关——`dsh plugin remove` 始终按包名移除。
 
 ### 安全
 

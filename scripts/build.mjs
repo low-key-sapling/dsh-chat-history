@@ -21,7 +21,7 @@ import { fileURLToPath } from 'node:url'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const root = join(here, '..')
-const pkgName = '@linxin666/dsh-chat-history'
+const pkgName = '@low-key-sapling/dsh-chat-history'
 const externalClient = [
   'react',
   'react-dom',
