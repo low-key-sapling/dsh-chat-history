@@ -23,13 +23,15 @@ Row color states: **grey** (normal) → **black** (hover) → **blue** (active /
 
 ## Install
 
-### From npm (recommended)
+### From GitHub (recommended)
 
 ```sh
-dsh plugin --profile web add @linxin666/dsh-chat-history@latest
+dsh plugin --profile web add github:low-key-sapling/dsh-chat-history
 ```
 
-### From the repository (development)
+The `prepare` script in `package.json` builds `lib/` automatically on install, so no manual build step is needed.
+
+### From a local clone (development)
 
 ```sh
 git clone git@github.com:low-key-sapling/dsh-chat-history.git
@@ -37,6 +39,8 @@ cd dsh-chat-history
 npm install && npm run build
 dsh plugin --profile web add link:$(pwd)
 ```
+
+A `link:` install references the local directory directly — after a code change, run `npm run build` and refresh the page; no reinstall needed.
 
 After installing, **restart `dsh web`** and refresh the page. The archived-sessions page appears under Settings; the question rail appears on the right edge of any conversation.
 
@@ -106,15 +110,17 @@ DSH Web GUI 的「归档会话管理 + 对话提问定位」插件——不改 D
 ### 安装
 
 ```sh
-# npm 安装（推荐）
-dsh plugin --profile web add @linxin666/dsh-chat-history@latest
+# 从 GitHub 安装（推荐）
+dsh plugin --profile web add github:low-key-sapling/dsh-chat-history
 
-# 从仓库安装（开发）
+# 从本地克隆安装（开发）
 git clone git@github.com:low-key-sapling/dsh-chat-history.git
 cd dsh-chat-history
 npm install && npm run build
 dsh plugin --profile web add link:$(pwd)
 ```
+
+`github:` 方式安装时 `prepare` 脚本会自动构建 `lib/`，无需手动 build。`link:` 方式安装后改代码只需 `npm run build` + 刷新页面，无需重新安装。
 
 安装后**重启 dsh web 并刷新页面**。设置里出现「归档会话」页；对话页右缘出现提问轨道。
 
