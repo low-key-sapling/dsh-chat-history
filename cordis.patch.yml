@@ -1,0 +1,14 @@
+# dsh-chat-history bundle patch: inserts the dual-face plugin row into the web
+# profile roster. Applied as a profile bundle layer (the `dsh.bundle.patch`
+# manifest field) over dsh-base; install with
+# `dsh plugin --profile web add link:<repo>/plugins/dsh-chat-history` and make
+# sure this row reaches the composed tree (profile `cordis.patch.yml` or as a
+# dependency of an aggregate bundle).
+#
+# The row is a bare plugin by package name: the node half (exports ".") runs
+# in the host process (the /api/dsh-chat-history/unarchive route), and the
+# `dsh.client` declaration in package.json makes the browser half
+# (exports "./client", served at /plugins/<id>/client.js) load in the web GUI.
+- insert:
+    - id: chat-history
+      name: '@linxin666/dsh-chat-history'
